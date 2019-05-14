@@ -19,8 +19,8 @@
 
     %Calculating chord line for inner and outer part of the wing
     %(Innen- und Aussenprofiltiefe)
-    l_inner=(2*A)/b;  %*(1+TaperRatio) ???
-    l_outer=(2*A*(TaperRatio))/b;
+    l_inner=(2*A)/(b*(1+TaperRatio));
+    l_outer=l_inner*TaperRatio;
 
     %Calculating wing loading
     B=m/A;

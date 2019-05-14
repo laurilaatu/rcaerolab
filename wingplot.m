@@ -10,5 +10,6 @@ function wingplot(b, l_inner, l_outer,color)
     plot([-b/2 0], [l_outer l_inner],color)
     plot([0 b/2], [l_inner l_outer],color)
     axis([-1 1 -1 1])
+    axis square
     hold off
 end
