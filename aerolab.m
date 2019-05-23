@@ -29,4 +29,18 @@
     Re_min_inner=(vs*l_inner)/kV;
     Re_min_outer=(vs*l_outer)/kV;
 
-
+    
+    %Calculating thrust 23.05.2019
+    
+    %Given
+    airdensity=1.2041;
+    
+    %Formula Force of thrust
+    
+    Fthrust = airdensity*((pi*(0.0254*diaprop).^2)/4)*(RPMprop*0.0254*pitchprop*(1/60))^2;
+    
+    %Formula Resistance
+    
+    %TODO Formel (22) verstehen und ausformulieren
+    %https://tu-dresden.de/ing/maschinenwesen/ilr/ressourcen/dateien/tfd/studium/dateien/Flugmechanik_V.pdf?lang=de
+   
