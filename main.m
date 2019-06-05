@@ -29,9 +29,9 @@ thrustplot(velocity,T_r,Fthrust)
 
 
 %comparison
-TaperRatio=5; %change a variable here
-aerolab
-hold on
+%TaperRatio=1; %change a variable here
+%aerolab
+%hold on
 %wingplot(b, l_inner, l_outer,'b') %uncomment for comparison
 
 
