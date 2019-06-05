@@ -37,10 +37,28 @@
     
     %Formula Force of thrust
     
-    Fthrust = airdensity*((pi*(0.0254*diaprop).^2)/4)*(RPMprop*0.0254*pitchprop*(1/60))^2;
+    %Fthrust = airdensity*((pi*(0.0254*diaprop).^2)/4)*(RPMprop*0.0254*pitchprop*(1/60))^2;
     
+    RPSprop = RPMprop / 60;
+    Fthrust = 2*airdensity*((pi*(0.0254*diaprop).^2)/4)...
+        *((0.0254*pitchprop*RPSprop)^2-(0.0254*pitchprop*RPSprop)*velocity)*(0.0254*diaprop/(3.29546*0.0254*pitchprop))^1.5;
+
     %Formula Resistance
     
     %TODO Formel (22) verstehen und ausformulieren
     %https://tu-dresden.de/ing/maschinenwesen/ilr/ressourcen/dateien/tfd/studium/dateien/Flugmechanik_V.pdf?lang=de
-   
+    %Given
+    
+    %Thrust required
+    %1.25 =: Safety factor
+    
+    %Oswald-Efficiencefactor
+    e=0.9;
+    %Beiwert fuer parasitaeren Widerstand bei alpha=0°
+    c_DO = 0.02;
+    
+    %q_inf =: dynamic pressure
+    q_inf = (airdensity./2).*(velocity.^2);
+    
+    T_r=(q_inf*A*c_DO)+(1.25.*(m.*g).^2)./(q_inf*A*pi*e*AspRatio);
+    
