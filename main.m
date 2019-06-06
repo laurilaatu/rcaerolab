@@ -19,7 +19,7 @@ Re_min_inner
 Re_min_outer
 
 %comparison
-TaperRatio=5; %change a variable here
+%TaperRatio=5; %change a variable here
 aerolab
 hold on
 %wingplot(b, l_inner, l_outer,'b') %uncomment for comparison
