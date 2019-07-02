@@ -1,0 +1,5 @@
+Spannweite 800mm
+cordline innen: 150mm
+Cordline auszen: 120mm
+trailing edge gerade -> 30mm offset
+profil: NACA 2412

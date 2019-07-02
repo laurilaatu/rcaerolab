@@ -10,9 +10,9 @@ AspRatio=6;                %Aspect Ratio = span/average chordline
 Ca_infinite=0.5;            %Liftcoefficient of our infinite wing
 m=0.7;                      %mass of the plane
 TaperRatio=0.8;             %Taper Ratio = inner chord/outer chord
-vs=14;                      %Stall speed/min Speed/lift off speed
+vs=17;                      %Stall speed/min Speed/lift off speed
 %Velocity in air (range)
-velocity=linspace(10,60,500);
+velocity=linspace(5,40,500);
 
 RPMprop=19404;
 diaprop=5;
